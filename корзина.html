@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="цсс.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<header class="site-header">
+    <div class="header-main">
+        <a href="#" class="brand"><img src="./лого.jpg" alt="" height="100px" width="100px" class="img-1" style="margin-top: 5px;"></a>
+        <div class="text-field">
+            <input class="text-field__input" type="text" name="login" id="login" placeholder="Search" value="">
+        </div>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="index.html" class="menu-bar-item">Главная страница</a> </li>
+                <li><a href="гитара.html" class="menu-bar-item">Гитары</a></li>
+                <li><a href="акустика.html" class="menu-bar-item">Акустические системы</a></li> 
+                <li><a href="пианино.html" class="menu-bar-item">Цифровые пианино</a></li> 
+                <li><a href="микрофоны.html" class="menu-bar-item">Микрофоны</a></li> 
+                <li><div class="buttons-wrapper">
+                    <div><a class="click-btn btn-style2" href="./корзина.html">Корзина</a></div>
+                </li>
+            </ul>
+        </nav>
+</header>
+<body>
+    <div class="main-body">
+        <div class="cart-block">
+            <!-- Пустые блоки для добавления выбранных позиций -->  
+        </div>
+        <div class="cart-buttons">
+            <button class="clear-cart-btn">Очистить корзину</button>
+            <a href="спасибо.html" class="pay-btn">Оплатить</a>
+        </div>  
+    </div>
+    
+    <script>
+        $(".clear-cart-btn").click(function() {
+            localStorage.removeItem("selectedItems");
+            location.reload(); // Обновляем страницу
+        });
+
+        $(document).ready(function(){
+            var selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+    
+            var cartBlock = $(".cart-block");
+    
+            function updateCart() {
+                cartBlock.empty(); // Очищаем корзину перед обновлением
+    
+                // Отображаем каждую позицию в корзине
+                selectedItems.forEach(function(item) {
+                    var itemName = item[0];
+                    var quantity = item[1];
+                    var itemElement = $("<div class='selected-item'>" + itemName + " <button class='plus-btn'>+</button><span class='quantity'>" + quantity + "</span><button class='minus-btn'>-</button></div>");
+                    cartBlock.append(itemElement);
+                });
+            }
+    
+            // Обработчик события для кнопки "+"
+            cartBlock.on("click", ".plus-btn", function() {
+                var quantityElement = $(this).siblings(".quantity");
+                var quantity = parseInt(quantityElement.text());
+                quantityElement.text(quantity + 1);
+                updateLocalStorage(); // Обновляем localStorage
+            });
+    
+            // Обработчик события для кнопки "-"
+            cartBlock.on("click", ".minus-btn", function() {
+                var quantityElement = $(this).siblings(".quantity");
+                var quantity = parseInt(quantityElement.text());
+                if (quantity > 1) {
+                    quantityElement.text(quantity - 1);
+                    updateLocalStorage(); // Обновляем localStorage
+                } else if (quantity === 1) {
+                    $(this).closest(".selected-item").remove(); // Удаляем позицию из корзины, если количество достигло 0
+                    updateLocalStorage(); // Обновляем localStorage
+                }
+            });
+    
+            // Функция для обновления данных в localStorage
+            function updateLocalStorage() {
+                var updatedItems = [];
+                cartBlock.find(".selected-item").each(function() {
+                    var itemName = $(this).text().split(" ")[0];
+                    var quantity = $(this).find(".quantity").text();
+                    updatedItems.push([itemName, parseInt(quantity)]);
+                });
+                localStorage.setItem("selectedItems", JSON.stringify(updatedItems));
+            }
+    
+            // Обновляем корзину при загрузке страницы
+            updateCart();
+        });
+    </script>
+    
+    
+</body>
+<footer>
+    <div class="icons-list">
+        <li class="icons">Phone number - 8 945 654 65 93</li>
+        <li class="icons">Social Network - art-melodi@gmail.com</li>
+    </div>
+</footer>
+
+</html>

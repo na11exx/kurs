@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин музыкальных инструментов"Арт-мелоди"</title>
+    <link rel="stylesheet" href="цсс.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<header class="site-header">
+    <div class="header-main">
+        <a href="#" class="brand"><img src="./лого.jpg" alt="" height="100px" width="100px" class="img-1" style="margin-top: 5px;"></a>
+        <div class="text-field">
+            <input class="text-field__input" type="text" name="login" id="login" placeholder="Search" value="">
+        </div>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="index.html" class="menu-bar-item">Главная страница</a> </li>
+                <li><a href="гитара.html" class="menu-bar-item">Гитары</a></li>
+                <li><a href="акустика.html" class="menu-bar-item">Акустические системы</a></li> 
+                <li><a href="пианино.html" class="menu-bar-item">Цифровые пианино</a></li> 
+                <li><a href="микрофоны.html" class="menu-bar-item">Микрофоны</a></li> 
+                <li><div class="buttons-wrapper">
+                    <div><a class="click-btn btn-style2" href="./корзина.html">Корзина</a></div>
+                </li>
+            </ul>
+        </nav>
+</header>
+<body>
+    <div class="main-body">
+        <div class="hotel-block">
+            <img src="https://avatars.mds.yandex.net/i?id=351f5d80b35056d1c403a32d882d4e0f_sr-11406357-images-thumbs&n=13" alt="" class="hotel-1">
+            <h5>Акустическая гитара VESTON F-38/BK</h5>
+            <p class="chertochka"></p>
+            <h2></h2>
+            <button class="click-btn btn-style2" onclick="addToCart('Акустическая гитара VESTON F-38/BK')">В корзину</button>
+
+        </div>
+            <div class="hotel-block">
+                <img src="https://static.sonovente.com/img/library/zoom/78/450/78965_1.jpg" alt="" class="hotel-1">
+                <h5>Акустическая гитара FENDER CD-60 Natural</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Акустическая гитара FENDER CD-60 Natural')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://static.onlinetrade.ru/img/items/m/akusticheskaya_gitara_belucci_bc3820_bs_sb__1830424_1.jpg" alt="" class="hotel-1">
+                <h5>Акустическая гитара Belucci BC3820 SB(BS)</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Акустическая гитара Belucci BC3820 SB(BS)')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://avatars.mds.yandex.net/get-mpic/16439276/2a0000019840d992582d0038b26315beb3a2/orig" alt="" class="hotel-1">
+                <h5>Электрогитара IBANEZ GRX70QA-TRB</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Электрогитара IBANEZ GRX70QA-TRB')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://avatars.mds.yandex.net/get-mpic/15394128/2a00000198072980989084533de034a3b87a/orig" alt="" class="hotel-1">
+                <h5>Электрогитара IBANEZ GRGR221PA-AQB </h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Электрогитара IBANEZ GRGR221PA-AQB')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://pdk.market/upload/iblock/fac/05vgccumzhywkx03g3tqpd0wpu2rfll6.png" alt="" class="hotel-1">
+                <h5>Электрогитара ROCKDALE Stars HSS BK</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Электрогитара ROCKDALE Stars HSS BK')">В корзину</button>
+            </div>
+        </div>
+        <script>
+    
+            function addToCart(itemName) {
+                var selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+                var existingItem = selectedItems.find(function(item) {
+                    return item[0] === itemName;
+                });
+    
+                if (existingItem) {
+                    existingItem[1]++;
+                } else {
+                    selectedItems.push([itemName, 1]);
+                }
+    
+                localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+                console.log(selectedItems);
+            }
+        </script>
+
+</body>
+
+<footer>
+    <div class="icons-list">
+        <li class="icons">Phone number - 8 945 654 65 93</li>
+        <li class="icons">Social Network - art-melodi@gmail.com</li>
+    <div>
+</footer>
+</html>

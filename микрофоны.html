@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин музыкальных инструментов"Арт-мелоди"</title>
+    <link rel="stylesheet" href="цсс.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<header class="site-header">
+    <div class="header-main">
+        <a href="#" class="brand"><img src="./лого.jpg" alt="" height="100px" width="100px" class="img-1" style="margin-top: 5px;"></a>
+        <div class="text-field">
+            <input class="text-field__input" type="text" name="login" id="login" placeholder="Search" value="">
+        </div>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="index.html" class="menu-bar-item">Главная страница</a> </li>
+                <li><a href="гитара.html" class="menu-bar-item">Гитары</a></li>
+                <li><a href="акустика.html" class="menu-bar-item">Акустические системы</a></li> 
+                <li><a href="пианино.html" class="menu-bar-item">Цифровые пианино</a></li> 
+                <li><a href="микрофоны.html" class="menu-bar-item">Микрофоны</a></li> 
+                <li><div class="buttons-wrapper">
+                    <div><a class="click-btn btn-style2" href="./корзина.html">Корзина</a></div>
+                </li>
+            </ul>
+        </nav>
+</header>
+<body>
+    <div class="main-body">
+        <div class="hotel-block">
+            <img src="https://mezzo-forte.ru/image/cache/catalog/product/A154839/A154839_316697_1-1000x1000.jpg" alt="" class="hotel-1">
+            <h5>Микрофон Shure SM58-LCE</h5>
+            <p class="chertochka"></p>
+            <h2></h2>
+            <button class="click-btn btn-style2" onclick="addToCart('Микрофон Shure SM58-LCE')">В корзину</button>
+
+        </div>
+            <div class="hotel-block">
+                <img src="https://www.pult.ru/upload/iblock/e53/e53cd4a35fd0196334a20de5a0ea2e2e.jpg" alt="" class="hotel-1">
+                <h5>Микрофонная стойка K&M 25960-300-55</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Микрофонная стойка K&M 25960-300-55')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://doctorhead.ru/upload/resize_cache/iblock/385/676_560_1/microfon_razniy_11253.jpg" alt="" class="hotel-1">
+                <h5>Audio-technica AT2020 USBi</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Audio-technica AT2020 USBi')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://avatars.mds.yandex.net/i?id=29e8d9e06d631d03842e5899b531d5f1-4577377-images-thumbs&n=13" alt="" class="hotel-1">
+                <h5>Подставка для микрофона ISK SKSD015</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Подставка для микрофона ISK SKSD015')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://bxuiiaeu1l.a.trbcdn.net/8hr/9nv/nwy/rok/sgc/www/owc/ccc/8hr9nvnwyroksgcwwwowcccc0.jpg" alt="" class="hotel-1">
+                <h5>Invotone MPF300</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Invotone MPF300')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://cdn.rbt.ru/images/gen/item_image/image/4999/23/499888_r613.jpg" alt="" class="hotel-1">
+                <h5>Микрофон Ritmix RWM-100 черный</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Микрофон Ritmix RWM-100 черный')">В корзину</button>
+            </div>
+        </div>
+        <script>
+    
+            function addToCart(itemName) {
+                var selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+                var existingItem = selectedItems.find(function(item) {
+                    return item[0] === itemName;
+                });
+    
+                if (existingItem) {
+                    existingItem[1]++;
+                } else {
+                    selectedItems.push([itemName, 1]);
+                }
+    
+                localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+                console.log(selectedItems);
+            }
+        </script>
+
+</body>
+
+<footer>
+    <div class="icons-list">
+        <li class="icons">Phone number - 8 945 654 65 93</li>
+        <li class="icons">Social Network - art-melodi@gmail.com</li>
+    <div>
+</footer>
+</html>

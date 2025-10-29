@@ -1,0 +1,344 @@
+html {
+    font-family:'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+body{
+    font-family:'Open Sans', sans-serif;
+    background:#000000;
+    width:90%;
+    margin:0 auto;
+    padding:2em 0 6em;
+}
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main {
+    background-color: #86bdd5;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 12px -3px rgba(0, 0, 0, 0.25);
+    max-width: 1200px;
+    display: flex
+}
+
+.brand{
+  margin-left: 40px;
+  margin-top: 5px;
+  width: 50px;
+  margin-top :15px;
+}
+
+.main-body{
+    height: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 12px -3px rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
+    margin-top: 30px;
+    max-width: 1200px; 
+    flex-wrap: wrap; 
+    display: flex;
+    height: 1000px;
+}
+
+.menu-bar {
+    display: flex;
+    margin-right: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    margin-left: 60px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar-item {
+    color: black;
+    text-decoration: none;
+    opacity: 1;
+    /* background-image: linear-gradient(90deg, rgba(16,172,184,1) 0%, rgba(81,23,162,1) 25%, rgba(201,0,255,1) 95%); */
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: opacity 0.5s ease;
+    text-decoration: none;
+}
+
+.menu-bar-item:hover {
+    /* color: rgba(0, 0, 0, 0.37); */
+    transition: 0.2s;
+    opacity: 0.4;
+}
+
+.menu-bar-item:hover {
+    background-size: 100% 2px;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+html {
+  font-family: "Fredoka One", cursive;
+}
+
+h1 {
+  display: inline-block;
+  position: relative;
+  margin: 2.5rem 0.5rem 0.5rem 50px;
+  background: #fafbff;
+  font-size: 1.68rem;
+  font-weight: bold;
+  padding: 0 10px;
+}
+h1::before {
+  width: calc(100% + 80px);
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  content: "";
+  z-index: -1;
+}
+
+.click-btn {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
+
+
+
+
+.btn-style2 {
+  background: rgb(255, 255, 255);
+  border-color: #9c7c5f;
+  color: #000000;
+  width: 100px;
+}
+.btn-style2:hover {
+  box-shadow: 0 0.25em 0.25em -0.1em #000000;
+  transform: translateY(-0.25em);
+  border-color: #1a0405;
+  color: #160808;
+}
+
+/*# sourceMappingURL=button.css.map */
+
+.hotel-block {
+    margin-top: 40px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 58px;
+    max-width: 300px;
+    /* position: -webkit-sticky; */
+    /* position: sticky; Прилипает к границе вьюпорта */
+    /* top: 0; Верхний край блока будет прилипать к верхней границе контейнера */
+    max-height: 400px;
+    -webkit-box-shadow: 8px 10px 20px 3px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 8px 10px 20px 3px rgba(34, 60, 80, 0.2);
+box-shadow: 8px 10px 20px 3px rgba(34, 60, 80, 0.2);
+    }
+
+
+.hotel-1 {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.chertochka {
+    margin-bottom: 5px;
+}
+
+footer {
+    height: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 12px -3px rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
+    margin-top: 30px;
+    max-width: 1200px; 
+    flex-wrap: wrap; 
+    display: flex;
+    height: 100px;
+    background-color: #949494;
+}
+
+footer a {
+    margin-left: 50px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fdfdfd;
+    
+    text-decoration: none;
+    opacity: 1;
+    /* background-image: linear-gradient(90deg, rgba(16,172,184,1) 0%, rgba(81,23,162,1) 25%, rgba(201,0,255,1) 95%); */
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: opacity 0.5s ease;
+    text-decoration: none;
+}
+
+footer a:hover {
+    transition: 0.2s;
+    opacity: 0.4;
+}
+
+.text-field {
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin-left: 70px;
+    margin-top: 15px;
+  }
+  /* стили для label */
+  
+  /* стили для input */
+  .text-field__input {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    background: url(./img/icons8-коробка-64.png) no-repeat 3px 1px;
+    background-position: 280px 6px;
+    background-size: 10% 69%;
+  }
+
+  .icon {
+    max-height: 30px;
+  }
+
+  .span {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #fafbff;
+  }
+
+  .icons-list {
+    height: 45px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 5px 12px -3px rgba(0, 0, 0, 0.25);
+    background-color: #525252;
+    margin-top: 30px;
+    max-width: 1200px; 
+    flex-wrap: wrap; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fafbff;
+  }
+
+  .icons-list li{
+    margin-left: 10px;
+    margin-right: 6px;
+  }
+
+  .img-1 {
+    max-height: 30px;
+  }
+
+  .selected-item {
+    margin-top: 40px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 58px;
+    max-width: 300px;
+    max-height: 400px;
+    -webkit-box-shadow: 8px 10px 20px 3px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 8px 10px 20px 3px rgba(34, 60, 80, 0.2);
+    box-shadow: 8px 10px 20px 3px rgba(34, 60, 80, 0.2);
+}
+
+.cart-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* центрирование по горизонтали */
+    position: absolute;
+    bottom: 10px; /* расположение кнопок в нижней части блока */
+    width: 100%;
+}
+
+.cart-buttons button,
+.cart-buttons a {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-color: rgb(255, 0, 0);
+}
+.pay-btn {
+  margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-color: green;
+}
+
+
+/* === Индивидуальные стили для кнопки Корзина и поля поиска === */
+.cart-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.text-field__input {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+.text-field__input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+
+/* Кнопка Корзина — белая */
+.cart-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Поле поиска — белое */
+.text-field__input {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+.text-field__input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}

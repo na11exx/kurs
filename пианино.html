@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин музыкальных инструментов"Арт-мелоди"</title>
+    <link rel="stylesheet" href="цсс.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<header class="site-header">
+    <div class="header-main">
+        <a href="#" class="brand"><img src="./лого.jpg" alt="" height="100px" width="100px" class="img-1" style="margin-top: 5px;"></a>
+        <div class="text-field">
+            <input class="text-field__input" type="text" name="login" id="login" placeholder="Search" value="">
+        </div>
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="index.html" class="menu-bar-item">Главная страница</a> </li>
+                <li><a href="гитара.html" class="menu-bar-item">Гитары</a></li>
+                <li><a href="акустика.html" class="menu-bar-item">Акустические системы</a></li> 
+                <li><a href="пианино.html" class="menu-bar-item">Цифровые пианино</a></li> 
+                <li><a href="микрофоны.html" class="menu-bar-item">Микрофоны</a></li> 
+                <li><div class="buttons-wrapper">
+                    <div><a class="click-btn btn-style2" href="./корзина.html">Корзина</a></div>
+                </li>
+            </ul>
+        </nav>
+</header>
+<body>
+    <div class="main-body">
+        <div class="hotel-block">
+            <img src="https://www.music-expert.ru/upload/iblock/975/975415d3217863f6004882428bc57f2a.jpg" alt="" class="hotel-1">
+            <h5>Пианино Emotive Hammerpiano 1W</h5>
+            <p class="chertochka"></p>
+            <h2></h2>
+            <button class="click-btn btn-style2" onclick="addToCart('Цифровое пианино Emotive Hammerpiano 1 W')">В корзину</button>
+
+        </div>
+            <div class="hotel-block">
+                <img src="https://avatars.mds.yandex.net/get-mpic/4120567/img_id2258056098036898625.jpeg/orig" alt="" class="hotel-1">
+                <h5>Цифровое пианино Ringway RP-35 B</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Цифровое пианино Ringway RP-35 B')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://droidone.ru/image/cache/catalog/products/hi-fi/klavishnye-instrumenty/cifrovye-pianino/cifrovye-pianino-artesia/cifrovoe-pianino-artesia-performer-black-400x400.jpg" alt="" class="hotel-1">
+                <h5>Цифровое пианино Artesia Performer Black</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Цифровое пианино Artesia Performer Black')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://skifmusic.ru/thumbs/2a/f1/x_1_normal_28ddf5823ff8c9f0b8e334552a98.webp" alt="" class="hotel-1">
+                <h5>Цифровое пианино Jonson&Co JC-2100 WH</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Цифровое пианино Jonson&Co JC-2100 WH')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://piano.by/components/com_jshopping/files/img_products/full_elektropiano-casio-ct-s1-bk-d146348ba15f1941423b5218de9cadee--1.jpg" alt="" class="hotel-1">
+                <h5>Цифровое пианино CASIO CT-S1BKC2</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Цифровое пианино CASIO CT-S1BKC2')">В корзину</button>
+            </div>
+            <div class="hotel-block">
+                <img src="https://bxuiiaeu1l.a.trbcdn.net/btz/4v8/t9i/1sg/wsc/04g/osg/gsc/s/btz4v8t9i1sgwsc04gosggscs.jpg" alt="" class="hotel-1">
+                <h5>Цифровое пианино KORG C1 AIR-BR</h5>
+                <p class="chertochka"></p>
+                <h2></h2>
+                <button class="click-btn btn-style2" onclick="addToCart('Цифровое пианино KORG C1 AIR-BR')">В корзину</button>
+            </div>
+        </div>
+        <script>
+    
+            function addToCart(itemName) {
+                var selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+                var existingItem = selectedItems.find(function(item) {
+                    return item[0] === itemName;
+                });
+    
+                if (existingItem) {
+                    existingItem[1]++;
+                } else {
+                    selectedItems.push([itemName, 1]);
+                }
+    
+                localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+                console.log(selectedItems);
+            }
+        </script>
+
+</body>
+
+<footer>
+    <div class="icons-list">
+        <li class="icons">Phone number - 8 945 654 65 93</li>
+        <li class="icons">Social Network - art-melodi@gmail.com</li>
+    <div>
+</footer>
+</html>
